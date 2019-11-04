@@ -1,6 +1,5 @@
 ## About
 
-University of Texas at Austin, class of 2020  
-Turing Scholars Program
+Hi. I'm Krishna. [Here](http://cs.utexas.edu/~kchittur/Krishna_Chittur_Resume.pdf "resume") is a link to my resume. [Here's](https://github.com/krishnachittur "github") my GitHub page.
 
-[Here](http://cs.utexas.edu/~kchittur/Krishna_Chittur_Resume.pdf "resume") is a link to my resume. Last updated 2019-6-13.
+My email address is [first name first initial][last name][at]utexas.edu.
