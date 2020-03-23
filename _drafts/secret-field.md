@@ -10,6 +10,8 @@ tags: [math, musings]
 - strict superset of rationals and strict subset of reals
     - in other words, a field extension of the rationals, but countable
     - apparently this is called an algebraic number field?
+    - similar to computable reals (Wikipedia)
+    - also see: constructible numbers, Gödel numbering
 - not complete but good for most non-calculus applications like geometry
 - most people don't teach via Cauchy sequences anyway
 - aside: Busy Beavers and why you can't just describe numbers with English

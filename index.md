@@ -1,6 +1,6 @@
 ## About
 
-Hi. I'm Krishna. [Here's](/resume.pdf "resume") my resume. [Here's](https://github.com/krishnachittur "github") my GitHub page. And [here's](/id_rsa.pub "pubkey") my pubkey.
+Hi. I'm Krishna Chittur. [Here's](/resume.pdf "resume") my resume. [Here's](https://github.com/krishnachittur "github") my GitHub page. And [here's](/id_rsa.pub "pubkey") my pubkey.
 
 My email address is [first name first initial][last name][at]utexas.edu.
 
