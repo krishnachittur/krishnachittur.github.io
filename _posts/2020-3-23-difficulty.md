@@ -41,7 +41,7 @@ As a particularly notorious example of this kind of difficulty, the trading card
 
 ### Difficulty type 5: Human difficulty
 
-There is something special about playing a game with a human opponent. A skilled human opponent is not merely challenging - they are actively trying to outwit you. They are looking for patterns in your behavior, they are looking to condition you into bad habits, they are trying to make you angry, or fearful, or cocky, and then take advantage when you least suspect it. An opposing human player is not a wall to climb, stiff and static - they are actively adapting to you and forcing you to adapt to them in kind. Those who achieve a high level of skill in any competitive game, be it Street Fighter, Go, or poker, will always talk about the "mindgames" involved and the psychological aspects. This is what competitive games are really all about.
+There is something special about playing a game with a human opponent. A skilled human opponent is not merely challenging - they are actively trying to outwit you. They are looking for patterns in your behavior, they are looking to condition you into bad habits, they are trying to make you angry, or fearful, or cocky, and then take advantage when you least suspect it. An opposing human player is not a wall to climb, stiff and static - they are actively adapting to you and forcing you to adapt to them in kind. Those who achieve a high level of skill in any competitive game, be it Street Fighter, Go, or poker, will always talk about the "mind games" involved and the psychological aspects. This is what competitive games are really all about.
 
 As an aside, games that require cooperation could also be considered to come under this kind of difficulty. Working in a team for a shared purpose still requires many of the same skills that competitive games entail - you have to put yourself in the shoes of another person and try to understand how they think. Truth be told, I don't understand these types of games very well, but there's no denying that most real-life sports entail watching teams of people work together in pursuit of a shared goal.
 
@@ -52,4 +52,4 @@ Of course, most games do not restrict themselves to a single type of difficulty.
 Overall, however, I hope this provides a bit of insight into what it might mean for something to be "hard", and how not all hard things are hard in the same way.
 
 
-[^1]: As you might notice, here I'll be using the word "game" loosely to encompass video games, baord games, card games, and physical sports. You'll have to forgive me for drawing most of my examples from video games, however.
+[^1]: As you might notice, here I'll be using the word "game" loosely to encompass video games, board games, card games, and physical sports. You'll have to forgive me for drawing most of my examples from video games, however.
