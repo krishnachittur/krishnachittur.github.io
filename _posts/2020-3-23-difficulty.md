@@ -51,5 +51,6 @@ Of course, most games do not restrict themselves to a single type of difficulty.
 
 Overall, however, I hope this provides a bit of insight into what it might mean for something to be "hard", and how not all hard things are hard in the same way.
 
+### Footnotes
 
 [^1]: As you might notice, here I'll be using the word "game" loosely to encompass video games, board games, card games, and physical sports. You'll have to forgive me for drawing most of my examples from video games, however.
