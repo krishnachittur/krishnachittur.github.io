@@ -3,6 +3,7 @@ layout: post
 title:  "The secret field that nobody will tell you about: part 2"
 category: math
 tags: [math, musings]
+mathjax: true
 ---
 
 ### Outline

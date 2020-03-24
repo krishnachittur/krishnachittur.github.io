@@ -6,6 +6,8 @@ tags: [math, musings]
 mathjax: true
 ---
 
+**NOTE: math rendering is currently broken on this page. Please wait so that I can get it fixed.**
+
 Most schools teach number systems the same way. First they teach natural numbers (or "counting numbers"), then integers, rationals, reals, and complex numbers, in that order. Rationals are countable and reals are not, but that's okay. Once you start taking roots, you need a number system more powerful than a countable underlying set allows for. Right?
 
 Well, no, not really. Full disclaimer here, I'm by no means a mathematician, but there seems to be a secret field[^1] between the rationals and reals that doesn't arise often in discussion. And that field is the field of middle and high-school algebra.
