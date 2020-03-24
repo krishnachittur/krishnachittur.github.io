@@ -7,13 +7,13 @@ tags: [games, musings]
 
 Some games are easy. Some games are hard. But not all hard games are hard in the same ways. Dark Souls is not difficult in the same way as, say, Go[^1]. To that end, I would like to propose a model of, let's say, five different types of difficulty in games.
 
-### Difficulty type 1: Patience and mental endurance
+### Difficulty type 1: patience and mental endurance
 
 One of the easiest ways to make something "difficult" is to stipulate, directly or indirectly, that a player spends a lot of time on it. In video games, this can be thought of as the "let's give all the enemies more health" approach - common for games that have multiple difficulty settings. As a bonus, from a programming perspective, this can be pretty easy to implement.
 
 If a strategy requires luck, and the player must simply attempt something over and over until they succeed, then that could also be considered to come under this type of difficulty.
 
-### Difficulty type 2: Physical execution
+### Difficulty type 2: physical execution
 
 Sometimes, performing a task requires a certain amount of physical fitness, quick reflexes, or hand-eye coordination. Much of the difficulty of most real-life sports comes under here. While fighting games do not rely as heavily on this type of difficulty as some might think, it is true that fast reflexes and precise timing can still prove helpful in many such games.
 
@@ -27,7 +27,7 @@ The other way for a player to benefit from practice is to have them slowly build
 
 Oftentimes these two approaches go hand-in-hand - for example, in a bullet hell game, the process of learning the attack patterns of an enemy is also the process of gaining the muscle memory necessary to dodge their attacks. Thus, I've grouped them together, somewhere between Type 1 difficulty (patience) and Type 2 (execution). Games that cultivate muscle memory can often feel like they have a high execution barrier, but in reality, all that is required is dedicated practice.
 
-### Difficulty type 3: Mental execution
+### Difficulty type 3: mental execution
 
 This broad type of difficulty encompasses games that force players to envision different possibilities, manage uncertainty and risk, and make intelligent, creative decisions in pursuit of their goals. Strategy games and puzzle games, for example, thrive on pushing players to their mental limits. Some games force players to make decisions under strict time constraints, like StarCraft and most timed chess variants, whereas others have no time limit, like Fire Emblem and Civilization. Most board games and card games have this kind of strategic component.
 
@@ -39,7 +39,7 @@ As another example, Tekken 7 currently has 52 playable characters, each with the
 
 As a particularly notorious example of this kind of difficulty, the trading card game Magic: The Gathering currently has over 20,000 distinct cards in circulation. Fortunately, most common formats greatly restrict the available pool of cards so that newer players aren't completely overwhelmed. Still, the challenge of having to memorize copious amounts of information outside of normal gameplay can feel daunting to many.
 
-### Difficulty type 5: Human difficulty
+### Difficulty type 5: human difficulty
 
 There is something special about playing a game with a human opponent. A skilled human opponent is not merely challenging - they are actively trying to outwit you. They are looking for patterns in your behavior, they are looking to condition you into bad habits, they are trying to make you angry, or fearful, or cocky, and then take advantage when you least suspect it. An opposing human player is not a wall to climb, stiff and static - they are actively adapting to you and forcing you to adapt to them in kind. Those who achieve a high level of skill in any competitive game, be it Street Fighter, Go, or poker, will always talk about the "mind games" involved and the psychological aspects. This is what competitive games are really all about.
 
