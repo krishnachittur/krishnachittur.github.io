@@ -6,8 +6,6 @@ tags: [math, musings]
 mathjax: true
 ---
 
-**NOTE: math rendering is currently broken on this page. Please wait so that I can get it fixed.**
-
 Most schools teach number systems the same way. First they teach natural numbers (or "counting numbers"), then integers, rationals, reals, and complex numbers, in that order. Rationals are countable and reals are not, but that's okay. Once you start taking roots, you need a number system more powerful than a countable underlying set allows for. Right?
 
 Well, no, not really. Full disclaimer here, I'm by no means a mathematician, but there seems to be a secret field[^1] between the rationals and reals that doesn't arise often in discussion. And that field is the field of middle and high-school algebra.
@@ -45,5 +43,5 @@ Part 2 of this post will discuss some answers to this question, as well as how m
 ### Footnotes
 
 [^1]: As a quick refresher, a [field](https://en.wikipedia.org/wiki/Field_(mathematics)) is, loosely speaking, a set closed under operations that can be thought of as addition, subtraction, multiplication, and division, where all of those operations behave and interact about how you'd expect.
-[^2]: More precisely, the useful reals are a [field extension](https://en.wikipedia.org/wiki/Field_extension) of $\doubleQ$. They could be considered an [algebraic number field](https://en.wikipedia.org/wiki/Algebraic_number_field), although of course they're not very well-defined the way I'm presenting them. I intend for this to be more of a thought experiment than a rigorous definition.
+[^2]: More precisely, the useful reals are a [field extension](https://en.wikipedia.org/wiki/Field_extension) of $\mathbb{Q}$. They could be considered an [algebraic number field](https://en.wikipedia.org/wiki/Algebraic_number_field), although of course they're not very well-defined the way I'm presenting them. I intend for this to be more of a thought experiment than a rigorous definition.
 [^3]: The useful reals are similar, but not quite equivalent to other ideas in mathematics, such as the [constructible numbers](https://en.wikipedia.org/wiki/Constructible_number) and [computable numbers](https://en.wikipedia.org/wiki/Computable_number). The set of useful reals is a superset of both. For example, one may define a given useful real as the supremum of some bounded sequence where the supremum in question is not computable.
