@@ -14,5 +14,3 @@ My email address is [first name first initial][last name][at]utexas.edu.
     </li>
   {% endfor %}
 </ul>
-
-_(More coming soon.)_

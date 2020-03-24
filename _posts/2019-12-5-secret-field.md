@@ -3,6 +3,7 @@ layout: post
 title:  "The secret field that nobody will tell you about: part 1"
 category: math
 tags: [math, musings]
+mathjax: true
 ---
 
 Most schools teach number systems the same way. First they teach natural numbers (or "counting numbers"), then integers, rationals, reals, and complex numbers, in that order. Rationals are countable and reals are not, but that's okay. Once you start taking roots, you need a number system more powerful than a countable underlying set allows for. Right?
