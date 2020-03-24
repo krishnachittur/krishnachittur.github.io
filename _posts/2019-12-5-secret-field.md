@@ -35,7 +35,7 @@ Yes! Let $A$, $B$, and $C$ be parenthesized symbolic expressions that correspond
 
 Now, if you have a symbolic expression $A$, and a symbolic expression $B$, there's really nothing stopping you from writing $(A+B)$ and claiming that this expression represents a specific real number. It also makes sense that $(A+B) = (B+A)$, that is, the expression on the left and the expression on the right are in the same equivalence class, and so on. In fact, you can say all of these things without even knowing what's in the symbolic expressions! I won't list out all the properties here, but a motivated reader can verify that these symbolic expression equivalence classes form an abelian group under addition and nonzero multiplication, that the multiplication distributes over the addition, and so on - in short, that we have all of the necessary properties of a field.
 
-#### Why do we care?
+### Why do we care?
 This is where we notice something interesting. The set of all symbolic expressions is countable, and since each "useful real" corresponds to an equivalence class of symbolic expressions, it follows that the useful reals are also countable. And yet, they contain all of the reals you would ever want to or be able to explicitly specify. Why do they always seem to feel "good enough"? Why is it that most people never really feel the need to consider the limitations of their own notation?
 
 Part 2 of this post will discuss some answers to this question, as well as how maybe, just maybe, this post never really was about real numbers in the first place.
