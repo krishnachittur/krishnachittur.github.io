@@ -5,7 +5,6 @@
 {% if page.text-expand %}
 <script>
 	function expandBlock(i) {
-    	console.log(i);
         var el = document.querySelectorAll('div.expand')[i];
     	el.style.display = 'block';
         el.style.height = 'auto';
@@ -30,8 +29,7 @@
         }
     });
     if (targetParent !== null) {
-        const parentcontent = targetParent.innerHTML.replace(expand_regex,'<div class="expand" style="display: none; height: 0; overflow: hidden;"><p>').replace(unexpand_regex,'</p></div>');
-        console.log("parentcontent: " + parentcontent);
+        const parentcontent = targetParent.innerHTML.replace(expand_regex,'<div class="expand" style="display: none; height: 0; overflow: hidden;">').replace(unexpand_regex,'</div>');
         targetParent.innerHTML = parentcontent;
         var elements = document.querySelectorAll('div.expand');
         Array.prototype.forEach.call(elements, function(el, i){
