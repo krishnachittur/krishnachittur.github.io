@@ -4,6 +4,7 @@ title:  "Negation and notation"
 category: math
 tags: [math, musings]
 mathjax: true
+text-expand: true
 ---
 
 This one's going to be pretty quick. Here's a puzzle. Suppose you have a function $f$, and you want to make it clear that $f(a) = f(b)$ and $f(-a) = f(-b)$ in a single line of notation. How do you do it?
