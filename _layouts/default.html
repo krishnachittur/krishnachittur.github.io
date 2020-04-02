@@ -10,8 +10,6 @@
   </head>
   <body>
     {% include mathjax.html %}
-    {% include buttons.html %}
-    {% include text-expand.html %}
     <header>
       <div class="container">
         <a id="a-title" href="{{ '/' | relative_url }}">
@@ -25,5 +23,7 @@
         {{ content }}
       </section>
     </div>
+    {% include buttons.html %}
+    {% include text-expand.html %}
   </body>
 </html>
