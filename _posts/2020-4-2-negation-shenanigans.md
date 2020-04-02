@@ -9,7 +9,7 @@ text-expand: true
 
 This one's going to be pretty quick. Here's a puzzle. Suppose you have functions $f$ and $g$, and you want to make it clear that $f(a) = g(b)$ and $f(-a) = g(-b)$ in a single terse line of notation. How do you do it? Note that we haven't defined any other operations on $a$ and $b$ besides negation.
 
-&nbsp;  
+&#8203;  
 
 @expand@ Small hint
 
@@ -24,7 +24,7 @@ Of these four things, you only want to express #1 and #4.
 
 @/expand@
 
-&nbsp;  
+&#8203;  
 
 @expand@ Bigger hint
 
@@ -32,7 +32,7 @@ If you were to write $f(\pm a) = g(\mp b)$, that would only give you #2 and #3 a
 
 @/expand@
 
-&nbsp;  
+&#8203;  
 
 @expand@ Solution
 
