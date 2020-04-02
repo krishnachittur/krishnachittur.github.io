@@ -1,6 +1,5 @@
 <!-- Heavily adapted from https://jekyllcodex.org/without-plugin/text-expand/ -->
-<!-- Still some bugs to work out, most notably that you 
-    have to have text between the expand sections. -->
+<!-- Allows for custom text after @expand@ -->
 
 {% if page.text-expand %}
 <script>
@@ -10,7 +9,6 @@
         el.style.height = 'auto';
         // currently not removing the button to expand
     }
-	// assume '<' character doesn't show up anywhere in label
 	const expand_regex = /<p>@expand@[^<]+<\/p>/g
 	const unexpand_regex = /<p>@\/expand@<\/p>/g
     var elements = document.querySelectorAll('p');
