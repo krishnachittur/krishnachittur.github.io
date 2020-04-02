@@ -2,6 +2,7 @@
 <!-- Still some bugs to work out, most notably that you 
     have to have text between the expand sections. -->
 
+{% if page.text-expand %}
 <script>
 	function expandBlock(i) {
     	console.log(i);
@@ -38,5 +39,4 @@
         });	
     }
 </script>
-</body>
-</html>
+{% endif %}
