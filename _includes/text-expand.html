@@ -3,20 +3,20 @@
 
 {% if page.text-expand %}
 <script>
-	function expandBlock(i) {
+    function expandBlock(i) {
         var el = document.querySelectorAll('div.expand')[i];
-    	el.style.display = 'block';
+        el.style.display = 'block';
         el.style.height = 'auto';
         // currently not removing the button to expand
     }
-	const expand_regex = /<p>@expand@[^<]+<\/p>/g
-	const unexpand_regex = /<p>@\/expand@<\/p>/g
+    const expand_regex = /<p>@expand@[^<]+<\/p>/g
+    const unexpand_regex = /<p>@\/expand@<\/p>/g
     var elements = document.querySelectorAll('p');
     var labels = [];
     var targetParent = null;
     Array.prototype.forEach.call(elements, function(el, i){
         if (el == null) {
-        	return;
+            return;
         }
         const s = el.innerHTML;
         if(s.startsWith('@expand@')) {
@@ -32,7 +32,7 @@
         var elements = document.querySelectorAll('div.expand');
         Array.prototype.forEach.call(elements, function(el, i){
             el.previousElementSibling.innerHTML = el.previousElementSibling.innerHTML + '<span> <a href="#" style="cursor: pointer;" onclick="expandBlock(' + i + ')">' + labels[i] + '</a></span>';
-        });	
+        });
     }
 </script>
 {% endif %}
