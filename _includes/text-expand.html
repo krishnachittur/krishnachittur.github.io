@@ -21,8 +21,9 @@
         	return;
         }
         const s = el.innerHTML;
-        if(s.startsWith('[expand]{') && s.endsWith("}")) {
-            labels.push(s.substring(9, s.length - 1));
+        if(s.startsWith('[expand]')) {
+            // skip a space
+            labels.push(s.substring(9));
             // assume all expand tags have the same parent (dubious)
             targetParent = el.parentNode;
         }
