@@ -30,7 +30,7 @@
         }
     });
     if (targetParent !== null) {
-        const parentcontent = targetParent.innerHTML.replace(expand_regex,'<div class="expand" style="display: none; height: 0; overflow: hidden;">').replace(unexpand_regex,'</div>');
+        const parentcontent = targetParent.innerHTML.replace(expand_regex,'<div class="expand" style="display: none; height: 0; overflow: hidden;"><p>').replace(unexpand_regex,'</p></div>');
         console.log("parentcontent: " + parentcontent);
         targetParent.innerHTML = parentcontent;
         var elements = document.querySelectorAll('div.expand');
