@@ -11,8 +11,8 @@
         // currently not removing the button to expand
     }
 	// assume '<' character doesn't show up anywhere in label
-	const expand_regex = /<p>\[expand\][^<]+<\/p>/g
-	const unexpand_regex = /<p>\[\/expand\]<\/p>/g
+	const expand_regex = /<p>@expand@[^<]+<\/p>/g
+	const unexpand_regex = /<p>@\/expand@<\/p>/g
     var elements = document.querySelectorAll('p');
     var labels = [];
     var targetParent = null;
@@ -21,7 +21,7 @@
         	return;
         }
         const s = el.innerHTML;
-        if(s.startsWith('[expand]')) {
+        if(s.startsWith('@expand@')) {
             // skip a space
             labels.push(s.substring(9));
             // assume all expand tags have the same parent (dubious)
