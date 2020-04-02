@@ -1,3 +1,7 @@
+---
+mathjax: true
+---
+
 ## About
 
 Hi. I'm Krishna Chittur. [Here's](/resume.pdf "resume") my resume. [Here's](https://github.com/krishnachittur "github") my GitHub page. And [here's](/id_rsa.pub "pubkey") my pubkey.

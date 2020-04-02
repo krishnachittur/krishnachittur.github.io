@@ -1,0 +1,41 @@
+<!-- Heavily adapted from https://jekyllcodex.org/without-plugin/text-expand/ -->
+<!-- Still some bugs to work out, most notably that you 
+    have to have text between the expand sections. -->
+
+<script>
+	function expandBlock(i) {
+    	console.log(i);
+        var el = document.querySelectorAll('div.expand')[i];
+    	el.style.display = 'block';
+        el.style.height = 'auto';
+        // currently not removing the button to expand
+    }
+	// assume '<' character doesn't show up anywhere in label
+	const expand_regex = /<p>\[expand\][^<]+<\/p>/g
+	const unexpand_regex = /<p>\[\/expand\]<\/p>/g
+    var elements = document.querySelectorAll('p');
+    var labels = [];
+    var targetParent = null;
+    Array.prototype.forEach.call(elements, function(el, i){
+        if (el == null) {
+        	return;
+        }
+        const s = el.innerHTML;
+        if(s.startsWith('[expand](') && s.endsWith(")")) {
+            labels.push(s.substring(9, s.length - 1));
+            // assume all expand tags have the same parent (dubious)
+            targetParent = el.parentNode;
+        }
+    });
+    if (targetParent !== null) {
+        const parentcontent = targetParent.innerHTML.replace(expand_regex,'<div class="expand" style="display: none; height: 0; overflow: hidden;">').replace(unexpand_regex,'</div>');
+        console.log("parentcontent: " + parentcontent);
+        targetParent.innerHTML = parentcontent;
+        var elements = document.querySelectorAll('div.expand');
+        Array.prototype.forEach.call(elements, function(el, i){
+            el.previousElementSibling.innerHTML = el.previousElementSibling.innerHTML + '<span> <a href="#" style="cursor: pointer;" onclick="expandBlock(' + i + ')">' + labels[i] + '</a></span>';
+        });	
+    }
+</script>
+</body>
+</html>
