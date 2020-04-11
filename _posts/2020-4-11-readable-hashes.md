@@ -50,7 +50,7 @@ bkey = base64.b64decode(key)
 
 Now for the fun part.
 
-### My Algorithm
+### Main algorithm
 
 The actual algorithm is pretty straightforward. You take the SHA256 of your bytestring as a sequence of 32 bytes, then reinterpret it as a sequence of 16 16-bit unsigned integers[^2]. You can then use those integers to index directly into our wordlist. Since we have 2^16 words, we have exactly one word for every potential index, giving us a nice invertible function to generate phrases with.
 
