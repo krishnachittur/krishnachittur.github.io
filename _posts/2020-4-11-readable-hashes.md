@@ -2,19 +2,20 @@
 layout: post
 title:  "Let's talk about readable hashes"
 category: CS
-tags: [software]
+tags: [software, projects]
 mathjax: true
 ---
 
-Hash functions are great - for computers. But how often do you find yourself actually verifying checksums by hand? Wouldn't it be nice if we could take a blob of binary, like an RSA key or a piece of software, and then not just hash it into something illegible like `d732fee6462de7f04f9432f1bb3925f57554db1d8c8d6f3138eea70e5787c7ae`, but make an English phrase that's memorable enough for a human to remember?
+Hash functions are great - for computers. But how often do you find yourself actually verifying checksums by hand or eye? Wouldn't it be nice if we could take a blob of binary, like an RSA key or a piece of software, and then not just hash it into something illegible like `d732fee6462de7f04f9432f1bb3925f57554db1d8c8d6f3138eea70e5787c7ae`, but make an English phrase that's memorable enough for a human to remember?
 
 ## Yeah, this idea isn't new
 
 Here's a bunch of things other people have already done to solve this exact problem:
 
-1. [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) is a popular algorithm used by Bitcoin wallets to generate 12 or 24-word mnemonics from a prefix of the SHA256 hash of your private key. It has been widely adapted, with over 10 different languages ports on the project page alone.
+1. [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) is a popular algorithm used by Bitcoin wallets to generate 12 or 24-word mnemonics from a prefix of the SHA256 hash of your private key. It has been widely adapted, with ports to over 10 different languages listed on the project page alone.
 2. [mnemonicode](https://github.com/singpolyma/mnemonicode) by Oren Tirosh and Stephen Paul Weber is a general invertible algorithm for converting binary sequences into short, clear, easy-to-pronounce words and back. It uses a carefully curated wordlist of just 1,626 words and has similarly been ported to quite a few different languages.
-3. [fpgaminer/hash-phrase](https://github.com/fpgaminer/hash-phrase) is probably the closest to what I independently came up with. It uses a prefix of the PBKDF2 SHA256 of a bytestring to get a 5-word phrase from a wordlist of 10,000.
+3. [RFC 1751](https://tools.ietf.org/html/rfc1751) is likewise intended to be easy to read aloud, with a wordlist of 2048 short words with no more than 4 letters each.
+4. [fpgaminer/hash-phrase](https://github.com/fpgaminer/hash-phrase) is a bit clloser to what I independently came up with. It uses a prefix of the PBKDF2 SHA256 of a bytestring to get a 5-word phrase from a longer wordlist of 10,000.
 
 You can also find a comparison of many of these algorithms [here](https://gist.github.com/raineorshine/8d67049c0aaaa082614e417660462fda), with sample outputs.
 
@@ -49,7 +50,7 @@ bkey = base64.b64decode(key)
 
 Now for the fun part.
 
-### Algorithm
+### My Algorithm
 
 The actual algorithm is pretty straightforward. You take the SHA256 of your bytestring as a sequence of 32 bytes, then reinterpret it as a sequence of 16 16-bit unsigned integers[^2]. You can then use those integers to index directly into our wordlist. Since we have 2^16 words, we have exactly one word for every potential index, giving us a nice invertible function to generate phrases with.
 
@@ -70,7 +71,7 @@ In practice, I really think this is the sweetspot for invertible human-readable 
 
 All of the code in this post has been in Python so far, but I've also written a reference version of this algorithm in Rust, which you can find [on my GitHub](https://github.com/krishnachittur/readable-hashes/tree/master). It's still not super polished, but it's pretty fast and it works. I hope to clean it up and add to it in the coming days.
 
-My ideal future is one where readable hashes are used everywhere, not just as checksums to verify the integrity of downloaded files, but as a way to confirm the identity of friends and family. Imagine firing up a new chat application and receiving a friend request. Wouldn't it be nice if a brief blurb showed up under their face that only their public key could have generated? Alas, the first challenge is popularizing end-to-end encryption enough for it to be the norm for one person to reuse the same keys across multiple applications. Until then, this dream will have to wait.
+My ideal future is one where readable hashes are used everywhere, not just as checksums to verify the integrity of downloaded files, but as a way to confirm the identity of friends and family. Imagine signing up for an account on a new chat application and receiving a friend request from someone you think you know. Wouldn't it be nice if a brief blurb showed up under their request that only their public key could have generated? Alas, the first challenge is popularizing end-to-end encryption enough for it to be the norm for one person to reuse the same keys across multiple applications. Until then, this dream will have to wait.
 
 ### Footnotes
 
