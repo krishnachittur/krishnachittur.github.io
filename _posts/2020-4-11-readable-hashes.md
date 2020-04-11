@@ -15,7 +15,7 @@ Here's a bunch of things other people have already done to solve this exact prob
 1. [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) is a popular algorithm used by Bitcoin wallets to generate 12 or 24-word mnemonics from a prefix of the SHA256 hash of your private key. It has been widely adapted, with ports to over 10 different languages listed on the project page alone.
 2. [mnemonicode](https://github.com/singpolyma/mnemonicode) by Oren Tirosh and Stephen Paul Weber is a general invertible algorithm for converting binary sequences into short, clear, easy-to-pronounce words and back. It uses a carefully curated wordlist of just 1,626 words and has similarly been ported to quite a few different languages.
 3. [RFC 1751](https://tools.ietf.org/html/rfc1751) is likewise intended to be easy to read aloud, with a wordlist of 2048 short words with no more than 4 letters each.
-4. [fpgaminer/hash-phrase](https://github.com/fpgaminer/hash-phrase) is a bit clloser to what I independently came up with. It uses a prefix of the PBKDF2 SHA256 of a bytestring to get a 5-word phrase from a longer wordlist of 10,000.
+4. [fpgaminer/hash-phrase](https://github.com/fpgaminer/hash-phrase) uses a prefix of the PBKDF2 SHA256 of a bytestring to get a 5-word phrase from a longer wordlist of 10,000.
 
 You can also find a comparison of many of these algorithms [here](https://gist.github.com/raineorshine/8d67049c0aaaa082614e417660462fda), with sample outputs.
 
