@@ -77,6 +77,8 @@ In practice, I really think this is the sweetspot for invertible human-readable 
 
 All of the code in this post has been in Python so far, but I've also written a reference version of this algorithm in Rust, which you can find [on my GitHub](https://github.com/krishnachittur/readable-hashes/tree/master). It's still not super polished, but it's pretty fast and it works. I hope to clean it up and add to it in the coming days.
 
+I did have one alternative idea for generating these phrases in a non-invertible way, which involved using a [GAN](https://en.wikipedia.org/wiki/Generative_adversarial_network) to generate memorable sentences or images and feeding in the SHA256 hash as an input to the trained generator. I may explore this idea more in the future.
+
 My ideal future is one where readable hashes are used everywhere, not just as checksums to verify the integrity of downloaded files, but as a way to confirm the identity of friends and family. Imagine signing up for an account on a new chat application and receiving a friend request from someone you think you know. Wouldn't it be nice if a brief blurb showed up under their request that only their public key could have generated? Alas, the first challenge is popularizing end-to-end encryption enough for it to be the norm for one person to reuse the same keys across multiple applications. Until then, this dream will have to wait.
 
 ### Footnotes
