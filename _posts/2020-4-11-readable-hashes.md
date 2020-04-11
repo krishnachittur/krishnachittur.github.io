@@ -72,7 +72,7 @@ Magistrate Armenian Miene petticoats greens Lulu voy emperors Goths Rhin prestig
 
 Right off the bat, words like "magistrate", "petticoats", "emperors", and "prestige" make this a cinch to remember in the long-term. Even if I don't know the exact phrase, the general impression of regal imagery means that I'll never mistake this for another arbitrary phrase.
 
-In practice, I really think this is the sweetspot for invertible human-readable mnemonics for hashes.Phrases longer than 16 words are exhausting to type out while offering no additional purchase for your memory, and a wordlist with more than 16 bits of entropy starts to look very weird, being mostly comprised of rare words that are hard to remember or recognize at all.
+In practice, I really think this is the sweetspot for invertible human-readable mnemonics for hashes. Phrases longer than 16 words are exhausting to type out while offering no additional purchase for your memory, and a wordlist with more than 16 bits of entropy starts to look very weird, being mostly comprised of rare words that are hard to remember or recognize at all.
 
 ### The future
 
