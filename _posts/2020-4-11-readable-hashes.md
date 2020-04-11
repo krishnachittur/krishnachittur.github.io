@@ -55,7 +55,6 @@ Now for the fun part.
 The actual algorithm is pretty straightforward. You take the SHA256 of your bytestring as a sequence of 32 bytes, then reinterpret it as a sequence of 16 16-bit unsigned integers[^2]. You can then use those integers to index directly into our wordlist. Since we have 2^16 words, we have exactly one word for every potential index, giving us a nice invertible function to generate phrases with.
 
 ```python
-# now we actually generate the phrase
 import hashlib
 digest = hashlib.sha256(bkey).digest()
 words = []
@@ -65,7 +64,15 @@ for i in range(16):
     words.append(lines[idx])
 ```
 
-In practice, I really think this is the sweetspot for invertible human-readable mnemonics for hashes.Phrases longer than 16 words are exhausting to type out, and a wordlist with more than 16 bits of entropy starts to look very weird, being mostly comprised of rare words that are hard to remember.
+As an example, here's the generated phrase for my pubkey, without any kind of capitalization normalization:
+
+```
+Magistrate Armenian Miene petticoats greens Lulu voy emperors Goths Rhin prestige Delft support Rod affliction whilst
+```
+
+Right off the bat, words like "magistrate", "petticoats", "emperors", and "prestige" make this a cinch to remember in the long-term. Even if I don't know the exact phrase, the general impression of regal imagery means that I'll never mistake this for another arbitrary phrase.
+
+In practice, I really think this is the sweetspot for invertible human-readable mnemonics for hashes.Phrases longer than 16 words are exhausting to type out while offering no additional purchase for your memory, and a wordlist with more than 16 bits of entropy starts to look very weird, being mostly comprised of rare words that are hard to remember or recognize at all.
 
 ### The future
 
