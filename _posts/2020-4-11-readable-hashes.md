@@ -5,7 +5,7 @@ category: CS
 tags: [software, projects]
 ---
 
-Hash functions are great - for computers. But how often do you find yourself actually verifying checksums by hand or eye? Wouldn't it be nice if we could take a blob of binary, like an RSA key or a piece of software, and then not just hash it into something illegible like `d732fee6462de7f04f9432f1bb3925f57554db1d8c8d6f3138eea70e5787c7ae`, but make an English phrase that's memorable enough for a human to remember?
+Hash functions are great - for computers. But how often do you find yourself actually verifying checksums by hand or eye? Wouldn't it be nice if we could take a blob of binary, like an RSA key or a piece of software, and then not just hash it into something illegible like `d732fee6...5787c7ae`, but make an English phrase that's memorable enough for a human to remember?
 
 ## Yeah, this idea isn't new
 
