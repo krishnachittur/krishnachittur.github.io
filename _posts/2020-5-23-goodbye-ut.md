@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "My finished thesis, graduation, and the future"
