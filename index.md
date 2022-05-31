@@ -4,7 +4,9 @@ mathjax: true
 
 ## About
 
-Hi. I'm Krishna Chittur. At the moment, I'm doing an MS in Computer Science at Carnegie Mellon University. [Here's](/resume.pdf "resume") my resume. [Here's](https://github.com/krishnachittur "github") my GitHub page. And [here's](/id_rsa.pub "pubkey") my pubkey.
+Hi. I'm Krishna Chittur. At the moment, I'm working at [Duolingo][duolingo] as a software engineer. Before that, I was doing an MS in Computer Science at Carnegie Mellon University.
+
+[Here's][resume] my resume. [Here's][github] my GitHub page. And [here's][pubkey] my pubkey.
 
 My email address is [my first name]@chittur.dev. For an alternative email address, see my resume.
 
@@ -18,3 +20,9 @@ My email address is [my first name]@chittur.dev. For an alternative email addres
     </li>
   {% endfor %}
 </ul>
+
+<!--- References -->
+[duolingo]: https://www.duolingo.com/
+[github]: https://github.com/krishnachittur
+[pubkey]: /id_rsa.pub
+[resume]: /resume.pdf
