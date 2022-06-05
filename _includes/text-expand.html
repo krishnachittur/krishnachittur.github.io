@@ -31,7 +31,7 @@
         targetParent.innerHTML = parentcontent;
         var elements = document.querySelectorAll('div.expand');
         Array.prototype.forEach.call(elements, function(el, i){
-            el.previousElementSibling.innerHTML = el.previousElementSibling.innerHTML + '<span> <a href="#" style="cursor: pointer;" onclick="expandBlock(' + i + ')">' + labels[i] + '</a></span>';
+            el.previousElementSibling.innerHTML = el.previousElementSibling.innerHTML + '<span> <a style="cursor: pointer;" onclick="expandBlock(' + i + ')">' + labels[i] + '</a></span>';
         });
     }
 </script>
