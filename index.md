@@ -16,6 +16,7 @@ My email address is [my first name]@chittur.dev. For an alternative email addres
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
+      <br><em>{{ post.subtitle }}</em>
       {{ post.excerpt }}
     </li>
   {% endfor %}
