@@ -40,6 +40,6 @@ There may be better ways to do this, but here's how I'd write it:
 
 $$f(\pm a) = g(\mp (-b))$$
 
-Is it kind of ugly? Yes, but that's the point. The notation is humorously inconsistent, and we can take advantage of  that.
+Is it kind of ugly? Yes, but that's the point. The notation is humorously inconsistent, and we can take advantage of that.
 
 @/expand@
