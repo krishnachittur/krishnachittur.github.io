@@ -6,6 +6,8 @@ tags: [math, musings]
 mathjax: true
 ---
 
+WIP
+
 ### Outline
 - aside: Busy Beavers and why you can't just describe numbers with English
 - 100% of real numbers can't be represented, but we don't mind, why?
