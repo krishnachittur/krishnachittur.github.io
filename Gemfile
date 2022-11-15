@@ -29,4 +29,5 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
+# https://github.com/jekyll/jekyll/issues/8523#issuecomment-751409319
 gem "webrick", "~> 1.7"
