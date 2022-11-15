@@ -24,12 +24,12 @@ preview:
         ln -f _drafts/$draft _posts/$DUMMY_DATE-$draft; \
     done
 
-# Get rid of the previewed drafts. Will fail if it gets
-# run on a different day from `preview`.
+# Get rid of the previewed drafts. Will silently fail if it gets
+# run on a different day from `just preview`.
 unpreview:
-    for post in `ls _posts/$DUMMY_DATE-*`; do \
-        echo $post; \
-        rm $post; \
+    for draft in `ls _drafts`; do \
+        echo $draft; \
+        rm -f _posts/$DUMMY_DATE-$draft; \
     done
 
 # Get rid of the generated site, cached metadata, etc.
