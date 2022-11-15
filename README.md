@@ -10,5 +10,6 @@ The theme is lightly modified from [`jekyll-theme-hacker`](https://pages-themes.
 - [x] Math typesetting with MathJax (only used on pages that need it to minimize JS overhead)
 - [x] Expandable buttons
 - [x] Post subtitles
-- [ ] RSS feed
+- [x] RSS feed
 - [ ] Paging posts on home page
+- [ ] Listing posts by tags

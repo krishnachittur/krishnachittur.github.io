@@ -6,7 +6,7 @@ mathjax: true
 
 Hi. I'm Krishna Chittur. At the moment, I'm working at [Duolingo][duolingo] as a software engineer. Before that, I was doing an MS in Computer Science at Carnegie Mellon University.
 
-[Here's][resume] my resume, and [here's][github] my GitHub page.
+[Here's][resume] my resume, and [here's][github] my GitHub page. If you'd like to be notified of updates, check out [my RSS feed][rss]!
 
 My email address is [my first name]@chittur.dev. For an alternative email address, see my resume.
 
@@ -26,3 +26,4 @@ My email address is [my first name]@chittur.dev. For an alternative email addres
 [duolingo]: https://www.duolingo.com/
 [github]: https://github.com/krishnachittur
 [resume]: /resume.pdf
+[rss]: /feed.xml
