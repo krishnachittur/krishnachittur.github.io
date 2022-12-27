@@ -11,6 +11,7 @@ export DUMMY_DATE := `date --iso-8601`
 # Update system-wide packages and local dependencies.
 update:
     gem update
+    bundle update --bundler
     bundle update
 
 # Serve the site on localhost:4000.
