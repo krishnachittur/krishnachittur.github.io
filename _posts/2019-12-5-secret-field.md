@@ -42,6 +42,8 @@ This is where we notice something interesting. The set of all symbolic expressio
 
 Part 2 of this post will discuss some answers to this question, as well as how maybe, just maybe, this post never really was about real numbers in the first place.
 
+--------------------------------------------
+
 ### Footnotes
 
 [^1]: As a quick refresher, a [field](https://en.wikipedia.org/wiki/Field_(mathematics)) is, loosely speaking, a set closed under operations that can be thought of as addition, subtraction, multiplication, and division, where all of those operations behave and interact about how you'd expect.

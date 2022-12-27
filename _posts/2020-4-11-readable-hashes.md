@@ -81,6 +81,8 @@ I did have one alternative idea for generating these phrases in a non-invertible
 
 My ideal future is one where readable hashes are used everywhere, not just as checksums to verify the integrity of downloaded files, but as a way to confirm the identity of friends and family. Imagine signing up for an account on a new chat application and receiving a friend request from someone you think you know. Wouldn't it be nice if a brief blurb showed up under their request that only their public key could have generated? Alas, the first challenge is popularizing end-to-end encryption enough for it to be the norm for one person to reuse the same keys across multiple applications. Until then, this dream will have to wait.
 
+--------------------------------------------
+
 ### Footnotes
 
 [^1]: That is, 2^16, for reasons that will be obvious later.
