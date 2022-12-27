@@ -2,6 +2,16 @@
 ---
 
 @import "{{ site.theme }}";
+
+// Improve padding on list items.
 ul li {
     padding: 5px 0px;
+}
+
+// When an image is displayed with a caption, center
+// the caption and increase the vertical margin.
+img+em {
+    display: block;
+    text-align: center;
+    margin: 15px;
 }
