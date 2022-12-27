@@ -25,8 +25,7 @@ preview:
         ln -f _drafts/$draft _posts/$DUMMY_DATE-$draft; \
     done
 
-# Get rid of the previewed drafts. Will silently fail if it gets
-# run on a different day from `just preview`.
+# Get rid of the previewed drafts. Will silently fail if it gets run on a different day from `just preview`.
 unpreview:
     for draft in `ls _drafts`; do \
         echo $draft; \
