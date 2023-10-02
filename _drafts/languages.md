@@ -24,3 +24,4 @@ WIP
 - Indians speaking Hindi with English UI language.
 - Thai has separate code points for diacritics which makes tokenization doubly hard.
 - The Hawaiian 'okina can be written with five different apostrophes, of which two are correct
+- Klingon, Yucatec, and Japanese don't use question marks, necessarily. Klingon straight up rewrites questions as commands sometimes and vice-versa (e.g. "hello" becomes "what do you want?")
