@@ -16,11 +16,19 @@ img+em {
     margin: 15px;
 }
 
-// A nice box for text that should stand out.
+section img {
+    max-width: 60%;
+    // center the image
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+// Same as above but without using flexbox.
 .callout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // text-align: center;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
