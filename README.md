@@ -9,6 +9,7 @@ This is a simple, experimental personal website. Check it out at [chittur.dev][s
 - [x] Expandable buttons
 - [x] Post subtitles
 - [x] RSS feed
+- [x] Callouts
 - [ ] Paging posts on home page
 - [ ] Listing posts by tags
 
