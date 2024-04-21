@@ -30,7 +30,7 @@ But first, the basics! Skip to the [local dev](#previewing-your-blog-locally) se
 
 ## Getting started
 
-I do most of my work in the [Windows Subsystem for Linux][wsl], which lets me pretend my mediocre Windows laptop is a significantly less mediocre Linux laptop while still playing video games in my spare time[^1]. That said, pretty much everything in this guide should apply just as well to a vanilla install of Ubuntu 22.04.
+I do most of my work in the [Windows Subsystem for Linux][wsl], which lets me pretend my mediocre Windows laptop is a significantly less mediocre Linux laptop while still playing video games in my spare time.[^1] That said, pretty much everything in this guide should apply just as well to a vanilla install of Ubuntu 22.04.
 
 Nowadays you can set up WSL just by opening up PowerShell and typing
 
