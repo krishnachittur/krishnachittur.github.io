@@ -140,7 +140,7 @@ In other words, we want to be able to understand both the input and output of $T
 
 $$
 \begin{align*}
-T(b_1) &= \sum_{i=1}^n {t_{1,i} c_i} \quad & \text{By the definition of a vector} \\[2ex]
+T(b_1) &= \sum_{i=1}^m {t_{1,i} c_i} \quad & \text{By the definition of a vector} \\[2ex]
 \left[T(b_1)\right]_C &= \begin{bmatrix}t_{1,1} & \dots & t_{1,m}\end{bmatrix} \quad & \text{Re-expressing as a coordinate vector}
 \end{align*}
 $$
