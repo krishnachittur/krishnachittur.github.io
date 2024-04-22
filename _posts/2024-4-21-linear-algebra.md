@@ -85,7 +85,7 @@ We've got our building blocks $B = \\{b_1, ..., b_n\\}$, and we've got our compl
 Attempt 1: we can try to express $\vec{x}$ by listing off which building blocks it contains and which ones it doesn't. Like, $\vec{x} = \{b_1, b_3, b_5\}$.
 </div>
 
-Not a crazy idea. But we immediately run into a wall: if we have only a finite number of basis elements, then we can only express a finite number of vectors. In particular, if we're only adding basis elements, then we can express at most $2^n$ vectors with this scheme. Even if we invent a symbol for subtraction, like $\vec{x} = b_1 - b_2$, that still only gives us $3^n$ possibilities - way too finite.
+Not a crazy idea. But we immediately run into a wall: if we have only a finite number of basis elements, then we can only express a finite number of vectors. In particular, if we're only adding basis elements, then we can express at most $2^n$ vectors with this scheme. Even if we invent a symbol for subtraction, like $\vec{x} = b_1 - b_2$, that still only gives us $3^n$ possibilities - way too finite. How will we ever express all of the possible rotations of a 3D shape with just a _finite_ number of vectors? No, this won't do.
 
 ![meme of Asuka saying 'pathetic' from Evangelion](/assets/images/posts/linear-algebra-1.jpg "This isn't xkcd. You're not going to get me to be witty twice in one go.")
 
