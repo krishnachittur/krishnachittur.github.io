@@ -212,7 +212,7 @@ Does that mean you should ditch Gilbert Strang and actually teach things the way
 
 One thing I have not mentioned yet is that part of linear algebra's usefulness comes not just from its mathematical universality, but from how amenable it is to being automated on modern hardware. The natural parallelizability of matrix multiplication has allowed us to build larger and faster GPUs to crunch numbers in quantities that have a quality all of their own. The entire modern field of deep learning hinges on this, as do other kinds of numerical methods and physical simulation.
 
-![xkcd joke about machine learning and linear algebra](https://imgs.xkcd.com/comics/machine_learning.png "The pile gets soaked with data and starts to get mushy over time, so it's technically recurrent.")
+[![xkcd joke about machine learning and linear algebra](https://imgs.xkcd.com/comics/machine_learning.png "The pile gets soaked with data and starts to get mushy over time, so it's technically recurrent.")][xkcd]
 
 Even quantum computers are really just chains of matrix multiplications when it comes down to it.
 
@@ -233,3 +233,4 @@ In a way, trying to explain how useful linear algebra is before actually teachin
 [monad-burritos]: https://byorgey.wordpress.com/2009/01/12/abstraction-intuition-and-the-monad-tutorial-fallacy/
 [representation-theory]: https://en.wikipedia.org/wiki/Representation_theory
 [reverse-math]: https://en.wikipedia.org/wiki/Reverse_mathematics
+[xkcd]: https://xkcd.com/1838/
