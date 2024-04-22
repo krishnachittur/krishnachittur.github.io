@@ -24,7 +24,7 @@ In short: the math way of doing things is a programmer's dream come true.[^1] Ma
 
 ## Okay but seriously though what's up with all of these arrays of numbers and tedious operations?
 
-Now for the contentious part. I'm no pedagogy expert, but my ideal linear algebra course would change up the order of things a bit from the usual approach. In particular, the typical course goes something like this:
+Now for the contentious part. I'm no pedagogy expert, but my ideal linear algebra course would change up the order of things a bit from the usual approach. In particular, the typical course goes something like this (e.g. [in Gilbert Strang's book][strang-toc]):
 
 1. Vectors, matrices
 1. Lots and lots of number crunching: matrix-vector products, matrix multiplication, Gauss-Jordan elimination, determinants, etc.
@@ -233,4 +233,5 @@ In a way, trying to explain how useful linear algebra is before actually teachin
 [monad-burritos]: https://byorgey.wordpress.com/2009/01/12/abstraction-intuition-and-the-monad-tutorial-fallacy/
 [representation-theory]: https://en.wikipedia.org/wiki/Representation_theory
 [reverse-math]: https://en.wikipedia.org/wiki/Reverse_mathematics
+[strang-toc]: https://math.mit.edu/~gs/linearalgebra/ila5/linearalgebra5_TOC.pdf
 [xkcd]: https://xkcd.com/1838/
