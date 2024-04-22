@@ -160,7 +160,7 @@ t_{2,1} & \dots & t_{2,n} \\
 \vdots & \ddots & \vdots \\
 t_{m,1} & \dots & t_{m,n}
 \end{bmatrix}
-\quad & \text{Writing out all the coordinates in a big grid}
+\quad & \text{Making a big grid with each value above as a separate column}
 \end{align*}
 $$
 
@@ -186,17 +186,19 @@ $$
 \begin{align*}
 \left[T\left(\vec{x}\right)\right]_C &= \left[T\left( \sum_{i=1}^n {x_i b_i} \right)\right]_C \quad &\text{Rewriting $x$ in the basis $B$} \\[2ex]
 &= \left[\sum_{i=1}^n {x_i T\left(b_i\right)} \right]_C \quad &\text{Using the fact that $T$ is linear} \\[2ex]
-&= \left[\sum_{i=1}^n \left({x_i \sum_{j=1}^m {t_{i,j} c_j}}\right) \right]_C \quad &\text{By definition of the coordinates of $T(b_i)$} \\[2ex]
-&= \left[\sum_{j=1}^m\sum_{i=1}^n {t_{i,j} x_i c_j} \right]_C \quad &\text{Swapping summations} \\[2ex]
-&= \begin{bmatrix}\sum_{i=1}^n {t_{i,1} x_i} & \dots & \sum_{i=1}^n {t_{i,m} x_i}\end{bmatrix} \quad & \text{By the definition of a coordinate vector}
+&= \left[\sum_{i=1}^n \left({x_i \sum_{j=1}^m {t_{j,i} c_j}}\right) \right]_C \quad &\text{By definition of the coordinates of $T(b_i)$} \\[2ex]
+&= \left[\sum_{j=1}^m\sum_{i=1}^n {t_{j,i} x_i c_j} \right]_C \quad &\text{Swapping summations} \\[2ex]
+&= \begin{bmatrix}\sum_{i=1}^n {t_{1,i} x_i} & \dots & \sum_{i=1}^n {t_{m,i} x_i}\end{bmatrix} \quad & \text{By the definition of a coordinate vector}
 \end{align*}
 $$
 
 <br>
 
-And that's it! It's worth meditating on that proof for a little bit. Matrix-vector multiplication isn't just some meaningless symbol shuffling: we've derived exactly the computations necessary to go from a representation of $\vec{x}$ to a representation of $T(\vec{x})$, and the little summations we have to do for each output coordinate may as well be referred to as "dot products".
+We can now read off the $j$-th element of our result above, $\sum_{i=1}^n {t_{j,i} x_i}$, and call it the "dot product" of the coordinate vectors $\begin{bmatrix}x_{1} & \dots & x_{n}\end{bmatrix}$ (our input) and $\begin{bmatrix}t_{j,1} & \dots & t_{j,n}\end{bmatrix}$ (the $j$-th row of our original matrix $\left[T\right]_{B,C}$). Feel free to quickly check that this is, indeed, the same thing as the traditional definition of a dot product.
 
-A similar process can be used to invent matrix-matrix multiplication: it's just function composition, carried out numerically. Feel free to derive it as an exercise.
+And that's it! It's worth meditating on that proof for a little bit. Matrix-vector multiplication isn't just some meaningless symbol shuffling: we've derived exactly the computations necessary to go from a representation of $\vec{x}$ to a representation of $T(\vec{x})$.
+
+A similar process can be used to invent matrix-matrix multiplication: it's just function composition, carried out numerically. This one is left as an exercise for the reader :D
 
 ## Some conclusions
 
