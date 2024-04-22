@@ -54,7 +54,7 @@ Oh boy, if that isn't circular. But I mean this sincerely. And to illustrate wha
 
 $$\forall a,b,\vec{x},\vec{y}: \quad T(a\vec{x} + b\vec{y}) = a T(\vec{x}) + b T(\vec{y})$$
 
-To me, that equation, and its many generalizations, are the absolute core of linear algebra. It doesn't matter what $T$ and $\vec{x}$ and $a$ are. It doesn't even matter what addition and multiplication mean. You can shuffle the definitions around however you like, as mathematicians are wont to do. What matters is the _structure of the equation itself_. Because when you view $T$ as a sort of function, and you view the above equation as a constraint on "linear" functions, you are basically saying the following:
+To me, that equation, and its many generalizations, are the absolute core of linear algebra. It doesn't matter what $T$ and $\vec{x}$ and $a$ are. It doesn't even matter what addition and multiplication mean (within reason). You can shuffle the definitions around however you like, as mathematicians are wont to do. What matters is the _structure of the equation itself_. Because when you view $T$ as a sort of function, and you view the above equation as a constraint on "linear" functions, you are basically saying the following:
 
 <div class="callout">
 A linear transformation is a function that you can understand just by understanding how it acts on smaller, simpler inputs.
