@@ -136,12 +136,12 @@ The notion of a coordinate vector solves our first problem, but we still need to
 It's not just the inputs of a linear transformation that are vectors, but the outputs too! And all of the outputs share the same vector space.
 </div>
 
-In other words, we want to be able to understand both the input and output of $T$ by breaking them down into components, even if those components are completely different. Let's just feed in one basis element to start, $b_1$. By our definition of a vector, we know that we can break down $T(b_1)$ along some basis $C = \\{c_1,...,c_n\\}$ and get some coefficients, which we'll call $t_{1,1}, ..., t_{1, m}$. We can use our handy concept of a coordinate vector to express the coordinates of $T(b_1)$:
+In other words, we want to be able to understand both the input and output of $T$ by breaking them down into components, even if those components are completely different. Let's just feed in one basis element to start, $b_1$. By our definition of a vector, we know that we can break down $T(b_1)$ along some basis $C = \\{c_1,...,c_n\\}$ and get some coefficients, which we'll call $t_{1,1}, ..., t_{m, 1}$. We can use our handy concept of a coordinate vector to express the coordinates of $T(b_1)$:
 
 $$
 \begin{align*}
-T(b_1) &= \sum_{i=1}^m {t_{1,i} c_i} \quad & \text{By the definition of a vector} \\[2ex]
-\left[T(b_1)\right]_C &= \begin{bmatrix}t_{1,1} & \dots & t_{1,m}\end{bmatrix} \quad & \text{Re-expressing as a coordinate vector}
+T(b_1) &= \sum_{i=1}^m {t_{i,1} c_i} \quad & \text{By the definition of a vector} \\[2ex]
+\left[T(b_1)\right]_C &= \begin{bmatrix}t_{1,1} & \dots & t_{m,1}\end{bmatrix} \quad & \text{Re-expressing as a coordinate vector}
 \end{align*}
 $$
 
@@ -152,7 +152,7 @@ But there are quite a few more input basis vectors than just $b_1$, so we may as
 
 $$
 \begin{align*}
-\left[T(b_i)\right]_C &= \begin{bmatrix}t_{i,1} & \dots & t_{i,n}\end{bmatrix} \quad & \text{The coordinates when we feed in just one basis vector} \\[2ex]
+\left[T(b_i)\right]_C &= \begin{bmatrix}t_{1,i} & \dots & t_{m,i}\end{bmatrix} \quad & \text{The coordinates when we feed in just one basis vector} \\[2ex]
 \left[T\right]_{B,C} &:=
 \begin{bmatrix}
 t_{1,1} & \dots & t_{1,n} \\
