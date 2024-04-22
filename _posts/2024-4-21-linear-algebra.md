@@ -33,7 +33,7 @@ Now for the contentious part. I'm no pedagogy expert, but my ideal linear algebr
 1. Eigenvalues and eigenvectors
 1. OH LOOK WE CAN FINALLY TALK ABOUT LINEAR TRANSFORMATIONS
 
-Bluntly, while this ordering may make sense for someone whose idea of linear algebra starts and ends with BLAS and `numpy.linalg`, I think this approach tends to miss the forest for the trees. Don't get me wrong: drilling the fundamentals is absolutely essential, and having concrete numbers to work with can make new math more approachable. But linear algebra is in the unfortunate situation is being a particularly useful subject that is also particularly obtuse from a purely numerical standpoint. And so in my ideal course, we would start from the other end and teach in the following order:
+Bluntly, while this ordering may make sense for someone whose idea of linear algebra starts and ends with BLAS and `numpy.linalg`, I think this approach tends to miss the forest for the trees. Don't get me wrong: drilling the fundamentals is absolutely essential, and having concrete numbers to work with can make new math more approachable. But linear algebra is in the unfortunate situation of being a particularly useful subject that is also particularly obtuse from a purely numerical standpoint. And so in my ideal course, we would start from the other end and teach in the following order:
 
 1. Linearity and linear transformations
 1. Invent the concepts of a basis, vector, and matrix
