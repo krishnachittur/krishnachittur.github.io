@@ -7,7 +7,7 @@ tags: [math, musings]
 mathjax: true
 ---
 
-Asking someone in a STEM field to motivate linear algebra is a bit like asking a Haskell programmer about monads. The best case scenario is that you'll get a shrug and a "don't worry about it, just learn when to use it". The more common scenario is an hour-long explanation that leaves you more confused than when you started. In keeping with my lifelong passion for confusing and upsetting as many people as possible, today I would like to talk about linear algebra. (I'll save the monads for a later date. Don't worry, [they're just burritos][monad-burritos].)
+Asking someone in a STEM field to justify linear algebra concepts is a bit like asking a Haskell programmer about monads. The best case scenario is that you'll get a shrug and a "don't worry about it, just learn when to use it". The more common scenario is an hour-long explanation that leaves you more confused than when you started. In keeping with my lifelong passion for confusing and upsetting as many people as possible, today I would like to talk about linear algebra. (I'll save the monads for a later date. Don't worry, [they're just burritos][monad-burritos].)
 
 Target audience for this post: someone with at least a little exposure to linear algebra. If you're starting from complete scratch and want a good high-level picture, I highly recommend 3Blue1Brown's [Essence of Linear Algebra series][3b1b] on YouTube. Though of course, even that is no substitute for an actual textbook.
 
