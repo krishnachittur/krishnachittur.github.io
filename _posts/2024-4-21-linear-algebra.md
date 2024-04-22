@@ -36,9 +36,9 @@ Now for the contentious part. I'm no pedagogy expert, but my ideal linear algebr
 Bluntly, while this ordering may make sense for someone whose idea of linear algebra starts and ends with BLAS and `numpy.linalg`, I think this approach tends to miss the forest for the trees. Don't get me wrong: drilling the fundamentals is absolutely essential, and having concrete numbers to work with can make new math more approachable. But linear algebra is in the unfortunate situation is being a particularly useful subject that is also particularly obtuse from a purely numerical standpoint. And so in my ideal course, we would start from the other end and teach in the following order:
 
 1. Linearity and linear transformations
-1. Motivate the definitions of a basis, vector, and matrix
-1. Motivate matrix multiplication, eigenvalues and eigenvectors
-1. Invent the rest of linear algebra now that we have the motivation to do so
+1. Invent the concepts of a basis, vector, and matrix
+1. Invent matrix multiplication, eigenvalues and eigenvectors
+1. Invent the rest of linear algebra now that we have what we need to do so
 
 I'm not sure if this would actually hold up in a real classroom, but regardless, I'd like to sketch out how this approach would work with the rest of this post.[^2] So let's start with:
 
@@ -136,12 +136,12 @@ The notion of a coordinate vector solves our first problem, but we still need to
 It's not just the inputs of a linear transformation that are vectors, but the outputs too! And all of the outputs share the same vector space.
 </div>
 
-In other words, we want to be able to understand both the input and output of $T$ by breaking them down into components, even if those components are completely different. Let's just feed in one basis element to start, $b_1$. By our definition of a vector, we know that we can break down $T(b_1)$ along some basis $C = \\{c_1,...,c_n\\}$. We can use our handy concept of a coordinate vector to express the coordinates of $T(b_1)$:
+In other words, we want to be able to understand both the input and output of $T$ by breaking them down into components, even if those components are completely different. Let's just feed in one basis element to start, $b_1$. By our definition of a vector, we know that we can break down $T(b_1)$ along some basis $C = \\{c_1,...,c_n\\}$ and get some coefficients, which we'll call $t_{1,1}, ..., t_{1, m}$. We can use our handy concept of a coordinate vector to express the coordinates of $T(b_1)$:
 
 $$
 \begin{align*}
 T(b_1) &= \sum_{i=1}^n {t_{1,i} c_i} \quad & \text{By the definition of a vector} \\[2ex]
-\left[T(b_1)\right]_C &= \begin{bmatrix}t_{1,1} & \dots & t_{1,n}\end{bmatrix} \quad & \text{Re-expressing as a coordinate vector}
+\left[T(b_1)\right]_C &= \begin{bmatrix}t_{1,1} & \dots & t_{1,m}\end{bmatrix} \quad & \text{Re-expressing as a coordinate vector}
 \end{align*}
 $$
 
