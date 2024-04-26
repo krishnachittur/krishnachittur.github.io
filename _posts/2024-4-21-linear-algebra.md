@@ -94,7 +94,7 @@ Let's try a different approach. In addition to "adding" and "subtracting" basis 
 This gives us the axiom we want:
 
 <div class="callout">
-Attempt 2: Any vector $\vec{x}$ can be expressed as a unique sum of scaled basis elements. For a basis $b_1, ..., b_n$ and corresponding scaling factors $x_1, ..., x_n$, we denote this as $\vec{x} = \sum_{i=1}^n {x_i b_i}$.
+Attempt 2: Any vector $\vec{x}$ can be expressed as a unique sum of scaled basis elements for some basis $B$. For a basis $B = \{b_1, ..., b_n\}$ and corresponding scaling factors $x_1, ..., x_n$, we denote this as $\vec{x} = \sum_{i=1}^n {x_i b_i}$.
 </div>
 
 (Yes, I did sneak the extra "unique" in there; without it, we can have multiple ways to represent something with our basis, which is kind of annoying, as we'll see in a moment.)
@@ -110,10 +110,10 @@ $$\left[x\right]_B := \begin{bmatrix}x_{1} & \dots & x_{n}\end{bmatrix}$$
 Earlier, we defined "vector" as "the input to a linear transformation". But now that we have this clean concept of a basis, we can refine our informal definition a bit. Namely:
 
 <div class="callout">
-A vector is anything that can be expressed as a scaled summation of basis elements, i.e. in the form $\vec{x} = \sum_{i=1}^n {x_i b_i}$. In other words, a vector is anything that can be broken down into understandable pieces. We henceforth refer to scaled summations of this form as "linear combinations".
+A vector is anything that can be expressed as a scaled summation of basis elements for any given basis $B$, i.e. in the form $\vec{x} = \sum_{i=1}^n {x_i b_i}$. Words like "scale" and "sum" can be redefined as needed, within reason. In other words, a vector is anything that can be broken down into understandable pieces. We henceforth refer to scaled summations of this form as "linear combinations".
 </div>
 
-Note that this means that basis elements are also vectors, because any basis element $b_i$ can be expressed as $b_i = 0 \times b_1 + ... + 1 \times b_i + ... + 0 \times b_n$. So we can now just call them _basis vectors_.
+Note that this means that basis elements $b_i \in B$ are also vectors over $B$, because any basis element $b_i$ can be expressed as $b_i = 0 \times b_1 + ... + 1 \times b_i + ... + 0 \times b_n$. So we can now just call them _basis vectors_.
 
 It's worth noting that, modulo rigor, this definition of a vector is pretty much always equivalent to the traditional "a vector is an element of a vector space" definition, since every vector space has a basis.[^5] Speaking of which, let's go ahead and define a vector space as well:
 
@@ -133,10 +133,10 @@ Recall that to understand $T(\vec{x})$, we needed to answer two questions:
 The notion of a coordinate vector solves our first problem, but we still need to answer the second. And to do this, we'll need to add a long-overdue restriction to our notion of a linear transformation:
 
 <div class="callout">
-It's not just the inputs of a linear transformation that are vectors, but the outputs too! And all of the outputs share the same vector space.
+It's not just the inputs to a linear transformation that are vectors, but the outputs too! All of the inputs share the same vector space, and all of the outputs likewise share a vector space. (If the input and output vector spaces are the same, then we refer to this transformation as a <em>linear operator</em>.)
 </div>
 
-In other words, we want to be able to understand both the input and output of $T$ by breaking them down into components, even if those components are completely different. Let's just feed in one basis element to start, $b_1$. By our definition of a vector, we know that we can break down $T(b_1)$ along some basis $C = \\{c_1,...,c_m\\}$ and get some coefficients, which we'll call $t_{1,1}, ..., t_{m, 1}$. We can use our handy concept of a coordinate vector to express the coordinates of $T(b_1)$:
+In other words, we want to be able to understand both the input and output of $T$ by breaking them down into components, even if those components are completely different. Let's just feed in one basis element to start, $b_1$. By our definition of a vector, we know that we can express $T(b_1)$ as a scaled sum of elements of some basis $C = \\{c_1,...,c_m\\}$ and get some coefficients, which we'll call $t_{1,1}, ..., t_{m, 1}$. We can use our handy concept of a coordinate vector to express the coordinates of $T(b_1)$:
 
 $$
 \begin{align*}
