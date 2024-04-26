@@ -64,7 +64,7 @@ In other words, to understand how $T$ acts on the complicated input $a\vec{x} + 
 
 ## Bases
 
-To recap, we have now the vague half-concept of a "linear transformation" as some kind of operation that can be understood by examining how it acts on components of its input. But for a concept like this to be useful, we need to actually be able to break said input down into components in the first place. Hence, the notion of a *basis*.
+To recap, we have now the vague half-concept of a "linear transformation" as some kind of operation that can be understood by examining how it acts on components of its input. But for a concept like this to be useful, we need to actually be able to break said input down into components in the first place. Hence, the notion of a _basis_.
 
 <div class="callout">
 A basis is a collection of building blocks that you can use to express the inputs to a linear transformation.
@@ -194,9 +194,15 @@ $$
 
 <br>
 
-We can now read off the $j$-th element of our result above, $\sum_{i=1}^n {t_{j,i} x_i}$, and call it the "dot product" of the coordinate vectors $\begin{bmatrix}x_{1} & \dots & x_{n}\end{bmatrix}$ (our input) and $\begin{bmatrix}t_{j,1} & \dots & t_{j,n}\end{bmatrix}$ (the $j$-th row of our original matrix $\left[T\right]_{B,C}$). Feel free to quickly check that this is, indeed, the same thing as the traditional definition of a dot product.
+We can now read off the $j$-th element of our result above, $\sum_{i=1}^n {t_{j,i} x_i}$, and call it the "dot product" of the coordinate vectors $\begin{bmatrix}x_{1} & \dots & x_{n}\end{bmatrix}$ (our input) and $\begin{bmatrix}t_{j,1} & \dots & t_{j,n}\end{bmatrix}$ (the $j$-th row of our original matrix $\left[T\right]_{B,C}$). Feel free to quickly check that this is, indeed, the same thing as the traditional definition of a dot product.   
 
-And that's it! It's worth meditating on that proof for a little bit. Matrix-vector multiplication isn't just some meaningless symbol shuffling: we've derived exactly the computations necessary to go from a representation of $\vec{x}$ to a representation of $T(\vec{x})$.
+And now that we have this compact way to compute $\left[T\left(\vec{x}\right)\right]_C$ as a coordinate vector of dot products, we can abbreviate this computation as our definition of a *matrix-vector product*.
+
+$$
+\left[T\right]_{B,C}\left[x\right]_B := \begin{bmatrix}\sum_{i=1}^n {t_{1,i} x_i} & \dots & \sum_{i=1}^n {t_{m,i} x_i}\end{bmatrix}
+$$
+
+And that's it! It's worth meditating on that proof for a little bit. Matrix-vector multiplication isn't just some meaningless symbol shuffling: we've derived exactly the computations necessary to go from a representation of $\vec{x}$ to a representation of $T(\vec{x})$. Of course, now that we've worked through a justification for this notation instead of just having a definition presented to us, we know that "product" is a bit of a misnomer, and this is really just an efficient method of function application.
 
 A similar process can be used to invent matrix-matrix multiplication: it's just function composition, carried out numerically. This one is left as an exercise for the reader :D
 
