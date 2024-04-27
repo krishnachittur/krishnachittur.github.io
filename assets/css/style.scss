@@ -27,6 +27,12 @@ section img {
     margin-bottom: 20px;
 }
 
+@media screen (max-width: 480px) {
+    section img {
+        max-width: 100%;
+    }
+}
+
 .callout {
     // text-align: center;
     padding: 15px;
