@@ -7,7 +7,9 @@ mathjax: true
 text-expand: true
 ---
 
-This one's going to be pretty quick. Here's a puzzle. Suppose you have functions $f$ and $g$, and you want to make it clear that $f(a) = g(b)$ and $f(-a) = g(-b)$ in a single terse line of notation. How do you do it? Note that we haven't defined any other operations on $a$ and $b$ besides negation.
+This one's going to be pretty quick. Here's a puzzle.
+
+Suppose you have functions $f$ and $g$, and you want to make it clear that $f(a) = g(b)$ and $f(-a) = g(-b)$ in a single terse line of notation. How do you do it? Note that we haven't defined any other operations on $a$ and $b$ besides negation.
 
 &#8203;  
 
