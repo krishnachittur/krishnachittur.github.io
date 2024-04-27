@@ -27,7 +27,7 @@ section img {
     margin-bottom: 20px;
 }
 
-@media screen (max-width: 480px) {
+@media screen and (max-width: 600px) {
     section img {
         max-width: 100%;
     }
