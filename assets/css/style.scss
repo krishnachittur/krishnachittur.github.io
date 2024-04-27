@@ -27,12 +27,21 @@ section img {
     margin-bottom: 20px;
 }
 
-// Same as above but without using flexbox.
 .callout {
     // text-align: center;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #333;
+    margin: 15px 0;
+}
+
+// Same as above but with a slight green tint for examples
+.callout-ex {
+    // text-align: center;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #273028;
     margin: 15px 0;
 }

@@ -15,7 +15,7 @@ Target audience for this post: someone with at least a little exposure to linear
 
 One of the reasons that linear algebra can be frustrating to the average high schooler or undergrad is that it's often the first time in your life that you get exposed to the Mathematician Way of Doing Things™. That is, rather than working with relatively concrete definitions, like "a vector is a list of real numbers" (a.k.a. the physicist's vector), you get far less helpful and less intuitive definitions, like "a vector is an element of a vector space", and "a vector space is a set that satisfies all of these different properties that you definitely won't remember and will definitely just end up visualizing as $\mathbb{R}^n$ anyway".
 
-There are basically two main benefits of doing things this way:
+There are basically two main benefits to doing things this way:
 
 1. <u>Minimal assumptions.</u> Structures like $\mathbb{R}^n$ have a LOT going on - they have a notion of distance, they have a notion of an inner product, you can even do calculus in them! Why make so many assumptions if you don't need them to prove the theorem at hand?
 1. <u>Broad applicability.</u> This goes hand in hand with the above. By assuming as little as possible, you can find potentially unexpected applications for existing ideas with minimal extra effort.
@@ -64,13 +64,19 @@ In other words, to understand how $T$ acts on the complicated input $a\vec{x} + 
 
 ## Bases
 
-To recap, we have now the vague half-concept of a "linear transformation" as some kind of operation that can be understood by examining how it acts on components of its input. But for a concept like this to be useful, we need to actually be able to break said input down into components in the first place. Hence, the notion of a _basis_.
+To recap, we have now the vague half-concept of a "linear transformation" as some kind of operation that can be understood by examining how it acts on components of its input. But for a concept like this to be useful, we need to actually be able to break said input down into components in the first place. Hence the notion of a _basis_.
 
 <div class="callout">
 A basis is a collection of building blocks that you can use to express the inputs to a linear transformation.
 </div>
 
-How delightfully backwards! How pleasantly vague! Let's try to strip away some of this vagueness and pin down something more useful and algebraic. "Input to a linear transformation" is a mouthful, so let's abbreviate that to the currently-meaningless term "vector". Let's assume our basis, our building blocks, consists of some set of mathematical objects $b_1, ..., b_n$. Let's assume that $\vec{x}$ is some complicated object ("vector") and we want to understand how our lovely linear transformation $T$ behaves when you feed it $\vec{x}$. To compute $T(\vec{x})$, then, we need to understand two things:
+How delightfully backwards! How pleasantly vague! Let's try to strip away some of this vagueness and pin down something more useful and algebraic. "Input to a linear transformation" is a mouthful, so let's abbreviate that to the currently-meaningless term "vector". Let's assume our basis, our building blocks, consists of some set of mathematical objects $b_1, ..., b_n$. Let's assume that $\vec{x}$ is some complicated object ("vector") and we want to understand how our lovely linear transformation $T$ behaves when you feed it $\vec{x}$.
+
+<div class="callout-ex">
+This is quite abstract, so as a motivating example, let's examine derivatives, particularly derivatives of real-valued polynomials of degree 2 and lower. In an elementary calculus class, one learns that you can compute the derivative of a function by breaking it up into pieces and then adding up the derivative of each piece. So intuitively, differentiation seems like the sort of operation that we want our concept of "linearity" to apply to. In this case, our transformation $T$ is the map $D$ which takes as input a function $f: \mathbb{R} \rightarrow \mathbb{R}$ of the form $f(z) = a + bz + cz^2$ and spits out the function $D(f) = \frac{d}{dz}f$ which is the derivative of $f$ with respect to $z$. (I'm using $z$ here instead of $x$ to avoid confusing this with our general notation of $\vec{x}$ for abstract vectors.) In this case, our linear transformation $T$ is the derivative operator $D$, and our vector $\vec{x}$ is the function $f$. We want to gain a better understand of $T(\vec{x})$ (i.e. $D(f)$) by examining how $T$ (i.e. $D$) acts on the building blocks that we used to build $\vec{x}$ (i.e. $f$).
+</div>
+
+To compute $T(\vec{x})$, then, we need to understand two things:
 
 1. How can we build our vector $\vec{x}$ out of our presumably useful building blocks $b_1, ..., b_n$?
 1. How can we express how $T$ behaves on each of these building blocks?
@@ -85,7 +91,7 @@ We've got our building blocks $B = \\{b_1, ..., b_n\\}$, and we've got our compl
 Attempt 1: we can try to express $\vec{x}$ by listing off which building blocks it contains and which ones it doesn't. Like, $\vec{x} = \{b_1, b_3, b_5\}$.
 </div>
 
-Not a crazy idea. But we immediately run into a wall: if we have only a finite number of basis elements, then we can only express a finite number of vectors. In particular, if we're only adding basis elements, then we can express at most $2^n$ vectors with this scheme. Even if we invent a symbol for subtraction, like $\vec{x} = b_1 - b_2$, that still only gives us $3^n$ possibilities - way too finite. How will we ever express all of the possible rotations of a 3D shape with just a _finite_ number of vectors? No, this won't do.
+Not a crazy idea. But we immediately run into a wall: if we have only a finite number of basis elements, then we can only express a finite number of vectors. In particular, if we're only adding basis elements, then we can express at most $2^n$ vectors with this scheme. Even if we invent a symbol for subtraction, like $\vec{x} = b_1 - b_2$, that still only gives us $3^n$ possibilities - way too finite. How will we ever express all polynomials or all of the possible rotations of a 3D shape with just a _finite_ number of vectors? No, this won't do.
 
 ![meme of Asuka saying 'pathetic' from Evangelion](/assets/images/posts/linear-algebra-1.jpg "This isn't xkcd. You're not going to get me to be witty twice in one go.")
 
@@ -99,11 +105,23 @@ Attempt 2: Any vector $\vec{x}$ can be expressed as a unique sum of scaled basis
 
 (Yes, I did sneak the extra "unique" in there; without it, we can have multiple ways to represent something with our basis, which is kind of annoying, as we'll see in a moment.)
 
+<div class="callout-ex">
+Revisiting our example of real-valued polynomials of degree 2 and lower, we can define the notion of "addition" of two functions (vectors) to be pointwise addition, i.e. if $f,g : \mathbb{R} \rightarrow \mathbb{R}$ then we can define $f+g : \mathbb{R} \rightarrow \mathbb{R}$ as the map that sends $z$ to $f(z) + g(z)$. We can then define scalar multiplication a similar way, where we require that any scalar $s$ is a real number and define $sf$ to be the function that sends $z$ to $s \times f(z)$. Feel free to check that our notion of linearity as defined above applies to the derivative operator when we use these definitions of addition and scaling. That is, $D(af + bg) = aD(f) + bD(g)$.
+
+<br><br>
+
+We can then define our basis $Q$ (for "quadratic basis") as the set of functions $\{q_0, q_1, q_2\}$ where $q_0: z \mapsto 1$, $q_1: z \mapsto z$, and $q_2: z \mapsto z^2$. Our function $f: z \mapsto az^2 + bz + c$ can then be rewritten using our new function-level addition and scaling operations as $f = aq_0 + bq_1 + cq_2$, which satisfies our axiom above. Proving that this representation is unique is left as an exercise, but should hopefully be self-evident.
+</div>
+
 Now that we have a nice notion of breaking a vector down into a basis, we notice something else. Since our basis is so great and reusable, there's probably no need to keep writing it down. In fact, if we have lots of vectors, we can distinguish them from each other solely by breaking them down into this basis and examining the scaling factors. (This is why uniqueness matters - you don't want two sets of scaling factors to give you the same vector!) So then we can simply hide away the $b_i$ and identify $\vec{x}$ with its coordinates $x_1,...,x_n$. The basis is still there, invisible, like the air you breathe. But there's no need to talk about it unless you ever want to switch to a different basis.
 
-Henceforth, then, we'll refer to these scaling factors $x_i$ as the "coordinates" of $\vec{x}$ with respect to our basis $b_1, ..., b_n$, and we'll use the term "coordinate vector" to refer to the list of these coordinates $\begin{bmatrix}x_{1} & \dots & x_{n}\end{bmatrix}$. We can go from $\vec{x}$ to its coordinates by breaking it down along the basis elements, and we can go from the coordinate vector back to $\vec{x}$ just by using the handy sum $\vec{x} = \sum_{i=1}^n {x_i b_i}$. So far so good! We'll use the following notation for coordinate vectors:
+Henceforth, then, we'll refer to these scaling factors $x_i$ as the "coordinates" of $\vec{x}$ with respect to our basis $b_1, ..., b_n$, and we'll use the term "coordinate vector" to refer to the list of these coordinates $\begin{bmatrix}x_{1} & \dots & x_{n}\end{bmatrix}$. We can go from $\vec{x}$ to its coordinates by breaking it down along the basis elements, and we can go from the coordinate vector back to $\vec{x}$ just by using the handy sum $\vec{x} = \sum_{i=1}^n {x_i b_i}$. So far so good! We'll use the following notation for coordinate vectors[^5]:
 
 $$\left[x\right]_B := \begin{bmatrix}x_{1} & \dots & x_{n}\end{bmatrix}$$
+
+<div class="callout-ex">
+In the case of our example, this becomes $\left[f\right]_Q = \begin{bmatrix}a & b & c\end{bmatrix}$, with the basis elements ordered $q_0,q_1,q_2$. Verify this for yourself!
+</div>
 
 ## Refining our notion of a vector
 
@@ -115,13 +133,17 @@ A vector is anything that can be expressed as a scaled summation of basis elemen
 
 Note that this means that basis elements $b_i \in B$ are also vectors over $B$, because any basis element $b_i$ can be expressed as $b_i = 0 \times b_1 + ... + 1 \times b_i + ... + 0 \times b_n$. So we can now just call them _basis vectors_.
 
-It's worth noting that, modulo rigor, this definition of a vector is pretty much always equivalent to the traditional "a vector is an element of a vector space" definition, since every vector space has a basis.[^5] Speaking of which, let's go ahead and define a vector space as well:
+It's worth noting that, modulo rigor, this definition of a vector is pretty much always equivalent to the traditional "a vector is an element of a vector space" definition, since every vector space has a basis.[^6] Speaking of which, let's go ahead and define a vector space as well:
 
 <div class="callout">
 A vector space is the set of all vectors for some basis. In other words, it's a collection of objects than can be broken down into the same underlying components.
 </div>
 
 Note the careful phrasing; this basis isn't necessarily unique for said vector space, but unlike the traditional definition, you do need to pick a basis to start with when you define a vector space.
+
+<div class="callout-ex">
+In the case of our example, the vector space spawned from the basis $Q$ is the set of all real-valued polynomials of degree 2 and lower. Take a moment to check this!
+</div>
 
 ## Matrices
 
@@ -170,6 +192,29 @@ We'll call this thing we just invented a _matrix_. There are two things to note 
 1. Reifying $T$ into a concrete grid of numbers required us to use two bases, not just one. Hence the notation $[T]_{B,C}$.
 1. We've written down all of our components, but that doesn't actually help us _do_ anything yet. We're still not sure what $T(\vec{x})$ is.
 
+<div class="callout-ex">
+Recall that we were interested in the derivative operator $D$ as it applies to real-valued polynomials of degree 2 and lower. The derivative of a degree-2 polynomial is a degree-1 polynomial, so we could just reuse our basis $Q$ or define a slightly smaller basis for the output of $D$. For convenience, I'll just reuse $Q$. We can apply $D$ individually to our basis vectors using some very basic calculus to build our matrix:
+
+<ol start="0">
+<li> $D(q_0) = D(z \mapsto 1) = z \mapsto 0$.</li>
+<li> $D(q_1) = D(z \mapsto z) = z \mapsto 1$.</li>
+<li> $D(q_2) = D(z \mapsto z^2) = z \mapsto 2z$.</li>
+</ol>
+
+Then we can express all three of the above results as coordinate vectors in the basis $Q$ and organize these coordinate vectors into columns, which gives us the following matrix. I highly encourage working this out for yourself!
+
+<br>
+
+$$
+\left[D\right]_{Q,Q} :=
+\begin{bmatrix}
+0 & 1 & 0 \\
+0 & 0 & 2 \\
+0 & 0 & 0
+\end{bmatrix}
+$$
+</div>
+
 The second point above segues nicely into our next topic:
 
 ## Matrix-vector multiplication as an efficient shorthand for function application
@@ -204,6 +249,26 @@ $$
 
 And that's it! It's worth meditating on that proof for a little bit. Matrix-vector multiplication isn't just some meaningless symbol shuffling: we've derived exactly the computations necessary to go from a representation of $\vec{x}$ to a representation of $T(\vec{x})$. Of course, now that we've worked through a justification for this notation instead of just having a definition presented to us, we know that "product" is a bit of a misnomer, and this is really just an efficient method of function application.
 
+<div class="callout-ex">
+One last time, let's pull up our example and put it all together. This time we can use our shiny new definition of matrix-vector multiplication to compute the derivative of the function $f$ where $f(z) = 1 + 2z + 3z^2$. First, we'll rewrite $f$ in our basis $Q$ to get $f = q_0 + 2q_1 + 3q_2$. Then, we'll rephrase that as the coordinate vector $[f]_Q = \begin{bmatrix}1 & 2 & 3\end{bmatrix}$. Finally, we'll apply the matrix for our derivative operator, which we computed above:
+
+$$
+\begin{align*}
+\left[D\right]_{Q,Q}\left[f\right]_Q &=
+\begin{bmatrix}
+0 & 1 & 0 \\
+0 & 0 & 2 \\
+0 & 0 & 0
+\end{bmatrix} \begin{bmatrix}1 & 2 & 3\end{bmatrix} \\[1em]
+&= \begin{bmatrix}2\times1 & 2\times3 & 0\end{bmatrix} \\[1em]
+&= \begin{bmatrix}2 & 6 & 0\end{bmatrix} \\[1em]
+&= \left[z \mapsto 2 + 6z\right]_Q
+\end{align*}
+$$
+
+And indeed, $\frac{d}{dz}(1 + 2z + 3z^2) = 2 + 6z$. Success!
+</div>
+
 A similar process can be used to invent matrix-matrix multiplication: it's just function composition, carried out numerically. This one is left as an exercise for the reader :D
 
 ## Some conclusions
@@ -230,7 +295,8 @@ In a way, trying to explain how useful linear algebra is before actually teachin
 [^2]: In particular, what I'm aiming for here is a little [reverse mathematics][reverse-math], where rather than presenting definitions as a _fait accompli_ and deriving theorems, I want to work backwards from our desired properties to figure out what definitions would get us there.
 [^3]: For the sake of clarity, though, I will cheat a little bit and stick to finite-dimensional reasoning for most of this post. Pretty much everything should be generalizable to the infinite-dimensional case.
 [^4]: More specifically, we assume they come from a field, i.e. have reasonable definitions of addition, subtraction, multiplication, and division with reasonable concepts of 0 and 1. If you give up on division you still have a ring, which means that we end up defining modules instead of vector spaces, which are still pretty nice but way beyond the scope of this post.
-[^5]: The caveat here is that the proof that every vector space has a basis requires the axiom of choice, but that axiom's basically a given if you want to have any fun anyway.
+[^5]: At the expense of being confusingly nonstandard, I'm going to write out coordinate vectors as rows instead of columns, because that makes them easier to write inline and I don't want to justify the concept of transposing just to write ^T everywhere for no real benefit.
+[^6]: The caveat here is that the proof that every vector space has a basis requires the axiom of choice, but that axiom's basically a given if you want to have any fun anyway.
 
 <!--- References -->
 [3b1b]: https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
