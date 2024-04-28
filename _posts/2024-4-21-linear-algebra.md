@@ -206,7 +206,7 @@ Then we can express all three of the above results as coordinate vectors in the 
 <br>
 
 $$
-\left[D\right]_{Q,Q} :=
+\left[D\right]_{Q,Q} =
 \begin{bmatrix}
 0 & 1 & 0 \\
 0 & 0 & 2 \\
