@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <!-- Liberally borrowed from https://github.com/jekyll/jekyll-redirect-from/blob/master/lib/jekyll-redirect-from/redirect.html -->
+  <meta charset="utf-8">
+  <title>Redirecting</title>
+  <link rel="canonical" href="{{ page.redirect_to }}">
+  <script>location="{{ page.redirect_to }}"</script>
+  <meta http-equiv="refresh" content="0; url={{ page.redirect_to }}">
+  <a href="{{ page.redirect_to }}">You are now being redirected. Click here.</a>
+</html>
