@@ -3,7 +3,7 @@ layout: post
 title:  "On the disconnect between internet communities and the companies that spawn them"
 subtitle: "Or, alternatively: things I wish I could tell /r/duolingo"
 category: misc
-tags: [musings]
+tags: [musings, internet]
 ---
 
 WIP
