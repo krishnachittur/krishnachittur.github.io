@@ -66,6 +66,7 @@ Now for the fun part.
 	gem update
 	bundle exec jekyll serve
 	bundle add webrick
+- mention rv as hopefully deprecating all of this
 
 --------------------------------------------
 
